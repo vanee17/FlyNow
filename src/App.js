@@ -1,5 +1,6 @@
 import './App.css';
 import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         </a>
   </header>*/}
   <NavBar/>
+  <ItemListContainer greeting="Bienvenid@ a BALÚ"/>
     </div>
   );
 }
