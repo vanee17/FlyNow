@@ -24,7 +24,7 @@ p{
     padding-top: 1vw;
     position: absolute;
     left: 10%;
-    text-shadow:0 0 10px white, 0 0 40px white, 0 0 80px white; ;
+    text-shadow:0 0 10px white, 0 0 40px white, 0 0 80px white;
 }
 .list{
     color: white;
@@ -36,4 +36,13 @@ p{
 }
 .list:hover{
     color: rgb(103, 237, 255);
+}
+.carrito{
+margin-bottom: 6px;
+margin-right: 5px;
+margin-top: 3px;
+}
+.carrito button {
+    background-color:0 0 10px white, 0 0 40px white, 0 0 80px white;;
+    cursor: pointer;
 }

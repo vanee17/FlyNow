@@ -1,10 +1,9 @@
 import persona from './img/persona.png'
 
 function CartWidget  () {
-    return <>
-                <img src={persona} alt="logo"/>
-                <p>7</p>
-        </>
+    return <div className="carrito">
+                <button><img src={persona}  alt="logo"/>9</button>
+        </div>
 }
 
 export default CartWidget
