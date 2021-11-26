@@ -8,7 +8,7 @@ function App() {
     <div className="App">
   <NavBar/>
   <ItemListContainer greeting="Bienvenid@ a BALÚ"/>
-  <ItemCount stock={20} initial={1}/>
+  <ItemCount stock={20} initial={1} /*onAdd={onAdd}*//>
     </div>
   );
 }
