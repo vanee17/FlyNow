@@ -2,11 +2,6 @@
     margin: 0;
     padding: 0;
 }
-p{
-    color: white;
-    font-size: 30px;
-    margin: 0.5vw;
-}
 .navContainer{
     background-color: rgb(45, 160, 102);
     display: flex;
@@ -50,4 +45,26 @@ p{
     background-color: transparent;
     color:rgb(45, 160, 102);
     border: rgb(45, 160, 102) 0.1vw solid;
+}
+/*itemCards*/
+.tarjetas{
+    display: inline-block;
+    border: black 0.2vw solid;
+    width: 20vw;
+    height: 25vw;
+    background-color: rgb(83, 77, 77);
+    margin: 2vw;
+}
+.imagen{
+    width: 15vw;
+    height: 15vw;
+    border:black solid 0.2vw;
+}
+p{
+    color: rgb(255, 255, 255);
+    font-size: 2vw;
+    margin: 0.5vw;
+}
+h2{
+    color: rgb(255, 255, 255);
 }
