@@ -1,29 +1,24 @@
-import {useEffect, useState} from "react"
-/*import ItemCount from "./ItemCount"*/
-import ItemList from "./ItemList"
-import { getProducts } from "./products"
+import { useEffect, useState } from "react";
+import ItemCount from "./ItemCount";
+import ItemList from "./ItemList";
+import  {getProducts}  from "./products";
 
+function ItemListContainer  ({greeting}) {
 
-const ItemListContainer = () => {
-    const[products, setProducts] = useState([])
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        const list = getProducts()
-
-        list.then((list) => {
-            setProducts(list)
-        })
-    })
-    return(
-            <ItemList product={products}/>
-    )
-}
-
-/*function ItemListContainer({greeting}){
-    return<>
+    const list = getProducts();
+    list.then((list) => {
+    setProducts(list);});
+});
+    return (
+    <>
     <h1>{greeting}</h1>
+    <ItemList product={products} />
     <ItemCount stock={20} initial={1} onAdd={"Se añadio a la canasta"} />
     </>
-}*/
+);
+};
 
-export default ItemListContainer
+export default ItemListContainer;
