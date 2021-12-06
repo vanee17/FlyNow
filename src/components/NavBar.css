@@ -68,3 +68,19 @@ p{
 h2{
     color: rgb(255, 255, 255);
 }
+/*itemdetail*/
+#card{
+    display: inline-block;
+    border: black 0.2vw solid;
+    width: 20vw;
+    height: 42vw;
+    background-color: rgb(83, 77, 77);
+    margin: 2vw;
+}
+#card p{
+    font-size: 1vw;
+}
+#card ul{
+    font-size: 1vw;
+    color: rgb(255, 255, 255);
+}
