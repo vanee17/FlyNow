@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #FFE3FE;
+}
+.navContainer{
+    background-color: #440A67;
+    display: flex;
+    justify-content: right;
+}
+.title{
+    color:white;
+    font-size:2.6vw;
+    padding-top: 0.6vw;
+    position: absolute;
+    left: 10%;
+    text-shadow:0 0 10px white, 0 0 40px white, 0 0 80px white;
+    font-weight: bold;
+}
+.list{
+    color: white;
+    display: inline-flex;
+    padding: 1.5vw 2vw;
+    font-size: 1.5vw;
+    cursor: pointer;
+    text-decoration: none;
+}
+.estilo{
+    list-style-type: none;
+
+}
+.list:hover{
+    color:#000000;
+}
+.carrito{
+    margin-bottom: 6px;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+.carrito button {
+    cursor: pointer;
+}
+.count{
+    position: absolute;
+    left: 49vw;
+    top: 48vw;
+
+}
+.count button{
+    width: 9vw;
+    background-color: transparent;
+    color:#440A67;
+    border: #440A67 0.1vw solid;
+    border-radius: 4vw;
+}
+/*itemCards*/
+.tarjetas{
+    display: inline-block;
+    width: 22.7vw;
+    height: 28vw;
+    background-color: #B4AEE8;
+    margin: 2vw;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.658);
+    overflow: hidden;
+    transition: all 0.25s;
+
+}
+.tarjetas:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.imagen{
+    width: 22.7vw;
+    height: 15vw;
+}
+p{
+    font-size: 2vw;
+    margin: 0.8vw;
+    color: #000000;
+    font-weight: bold;
+}
+h2{
+    color: #440A67;
+    text-shadow:0 0 10px white, 0 0 40px white, 0 0 80px #440A67;
+}
+.boton{
+    display: inline-block;
+    margin-top: 3vw;
+    width: 22vw;
+    height: 30px;
+    background-color: #440A67;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+    border-bottom:  5px solid #FFE3FE;
+    font-size: 1.5vw;
+    padding: 0.3vw;
+}
+.boton:hover{
+    background-color: #c673fab0;
+}
+.boton:active{
+    position: relative;
+    top: 5px;
+    border-bottom: none;
+    box-shadow: inset 1px 1px 2px black 2px 2px 2px silver;
+}
+/*itemdetail*/
+#card{
+    display: inline-block;
+    width: 40vw;
+    height: 48vw;
+    background-color:#B4AEE8 ;
+    margin: 2vw;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.658);
+    text-shadow:0 0 10px white, 0 0 40px white, 0 0 80px #440A67;
+}
+#card p{
+    font-size: 1vw;
+}
+#card ul{
+    font-size: 1vw;
+    list-style-type: none;
+    margin-right: 20vw;
+    margin-top: 2vw;
+}
+#card input{
+    font-size: 1vw;
+    margin-right: 20vw;
+}
+#card p{
+    position:absolute;
+    left: 53vw;
+    top: 45vw;
+}
+#card h5{
+    font-size: 1.0vw;
+    font-weight:normal;
+}
+.imagen1{
+    width: 40vw;
+    height: 25vw;
+}
