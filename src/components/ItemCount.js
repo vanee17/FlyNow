@@ -1,9 +1,8 @@
 import { useState } from "react"
 
-function ItemCount  ({stock, initial,onAdd}) {
+function ItemCount  ({stock, initial, onAdd}) {
     
     const [count, setCount]= useState(initial)
-    const [aviso]=useState(onAdd)
     
     const agregar = () =>{
         if (count < stock) {
@@ -17,17 +16,14 @@ function ItemCount  ({stock, initial,onAdd}) {
     setCount(1)
 }
     }
-    const letrero = () =>{
-        
-            alert(aviso);
-        
-    }
+
     return <div className="count">
-                <h1>{count}</h1>
+                <h4>Cuantos dias te quedaras</h4>
+                <h2>{count}</h2>
                 <button onClick={quitar}>-</button>
                 <button onClick={agregar}>+</button>
                 <br/>
-                <button onClick={letrero}>Agregar a mi bolsa</button>
+                <button onClick={ ()=>onAdd()}>Agregar a mi bolsa</button>
             </div>
 }
 

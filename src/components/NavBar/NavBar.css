@@ -45,8 +45,11 @@ body{
 .count{
     position: absolute;
     left: 49vw;
-    top: 48vw;
-
+    top: 44vw;
+}
+.count h4{
+    color:#440A67;
+    font-size: 1.2vw;
 }
 .count button{
     width: 9vw;
@@ -54,6 +57,16 @@ body{
     color:#440A67;
     border: #440A67 0.1vw solid;
     border-radius: 4vw;
+}
+.añadido{
+    position: absolute;
+    left: 55vw;
+    top: 51vw;
+}
+.Fcompra{
+    position: absolute;
+    left: 53vw;
+    top: 54vw;
 }
 /*itemCards*/
 .tarjetas{
@@ -123,7 +136,7 @@ h2{
 #card p{
     font-size: 1vw;
 }
-#card ul{
+#card h6{
     font-size: 1vw;
     list-style-type: none;
     margin-right: 20vw;
@@ -132,11 +145,16 @@ h2{
 #card input{
     font-size: 1vw;
     margin-right: 20vw;
+    margin-top: 1.2vw;
+}
+.hotel{
+    font-size: 1vw;
+    margin-right: 20vw;
 }
 #card p{
     position:absolute;
-    left: 53vw;
-    top: 45vw;
+    left: 34vw;
+    top: 53vw;
 }
 #card h5{
     font-size: 1.0vw;
