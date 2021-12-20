@@ -1,17 +1,9 @@
 import "../NavBar/NavBar.css"
-import ItemCount from "../ItemCount"
-import { useState } from "react"
-import {Link} from "react-router-dom"
 
 const ItemDetail = ({product}) => {
-    const[add, setAdd] =  useState(false)
-    const onAdd = () =>{
-        setAdd(!add)
-    }
+
 
     return(
-    <div>{
-        product?.length !==0?(
         <div id="card">
             <img className="imagen1"src={product.img} alt={product.name}/>
             <h2>
@@ -34,14 +26,6 @@ const ItemDetail = ({product}) => {
         Precio: {product.price}
         </p>
         </div>
-        {
-            add? <div className="añadido">Añadido!!</div>:
-            <ItemCount id="contador" stock={20} initial={1} onAdd={onAdd} />
-        }
-        <Link className="Fcompra" to = "/cart">Finalizar Compra</Link>
-        </div>
-        ):(<div>Cargando...</div>)
-    }
     </div>)
 }
 

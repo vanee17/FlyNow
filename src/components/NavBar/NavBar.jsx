@@ -25,6 +25,7 @@ console.log(categories)
                         {categories.map(cat=><Link className="list" key={cat.id} to={`/category/${cat.id}`}>{cat.description}</Link>)}
                     </div>
                     <CartWidget/>
+                    
             </ul>
 
         </div>

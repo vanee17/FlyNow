@@ -1,14 +1,17 @@
+import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar/NavBar.jsx';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-
+import Cart from './components/context/Cart';
+import { CartContext } from './components/context/CartContext';
 
 function App() {
   return (
     <div className="App">
-    <BrowserRouter> 
+    <CartContext>
+    <BrowserRouter>
       <NavBar/>
       <Switch>
         <Route exact path ='/'>
@@ -20,9 +23,14 @@ function App() {
         <Route  path ='/detail/:paramId'> 
           <ItemDetailContainer/>
         </Route>
+        <Route  path={'/cart'}>
+        <Cart/>
+        </Route>
       </Switch>
     </BrowserRouter>
+    </CartContext>
     </div>
+    
   );
 }
 

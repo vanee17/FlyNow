@@ -13,8 +13,11 @@ function ItemCount  ({stock, initial, onAdd}) {
         if (count > 1){
             setCount(count - 1)
         }else{
-    setCount(1)
+        setCount(0)
 }
+    }
+    const add = () => {
+        onAdd(count)
     }
 
     return <div className="count">
@@ -23,7 +26,7 @@ function ItemCount  ({stock, initial, onAdd}) {
                 <button onClick={quitar}>-</button>
                 <button onClick={agregar}>+</button>
                 <br/>
-                <button onClick={ ()=>onAdd()}>Agregar a mi bolsa</button>
+                <button onClick={add}>Agregar a mi bolsa</button>
             </div>
 }
 
