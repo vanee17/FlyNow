@@ -1,10 +1,12 @@
 import React from 'react'
+import ItemCart from './ItemCart'
 
-
-const Cart = (items) => {
+const Cart = ({items}) => {
     return (
         <div>
-            {items.map(item=><itemCart key={item.product.id} item={item.product}/>)}
+        {<div>
+            {items.map(item=><ItemCart key={item.product.id} item={item.product} quantity={item.quantity}/>)}
+        </div>}
         </div>
     )
 }

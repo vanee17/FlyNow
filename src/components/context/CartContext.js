@@ -15,16 +15,17 @@ export const CartContext = ({ children }) => {
     const isInCart = (itemId) => {
         return items.find((item) => item.product.id === itemId);
     };
-    const removeItem = (id) => {
+    const removeItem = (id, itemQuantity) => {
         setItems(items.filter((item) => item.product.id !== id));
+        setQuantity(quantity - itemQuantity);
     };
     const clearItems = () => {
-        setItems([]);
+        setItems([])
+        setQuantity(0)
     };
     const addQuantity = (itemQuantity) => {
         setQuantity(quantity + itemQuantity);
     }
-
     return (
         <Context.Provider value={{ values: { items, quantity }, addItem, addQuantity, removeItem, clearItems, isInCart }}>
             {children}

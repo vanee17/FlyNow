@@ -15,10 +15,14 @@ function ItemDetailContainer() {
 
     const onAdd = (quantity) => {
         if (quantity > 0) {
-            if (!isInCart(product.id)) {
+            let productoRecibido = isInCart(product.id)
+            if (!productoRecibido) {
                 setAdd(true)
                 addItem({product, quantity})
                 addQuantity(quantity)
+                window.alert(`¡Agregaste la cantidad de ${quantity} de ${product.name} a tu bolsa!`);
+                addQuantity(quantity);
+                setPurchase(true);
             }else{
                 console.log('no hay')
             }
