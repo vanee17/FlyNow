@@ -14,6 +14,5 @@ const CartViewContainer = () =>{
             <button onClick={clearItem}>VACIAR BOLSA</button>
         </div>
     )
-
 }
 export default CartViewContainer
