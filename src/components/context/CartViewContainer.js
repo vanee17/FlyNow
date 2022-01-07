@@ -9,9 +9,14 @@ const CartViewContainer = () =>{
     const {values,clearItems} = useContext(CartContext)
     return(
         <div>
+            
+                <div>
             <Cart items={values.items}/>
             <p>{values.quantity}</p>
+            {/*<p>${values.total}</p>*/}
             <button onClick={clearItem}>VACIAR BOLSA</button>
+            </div>
+            
         </div>
     )
 }

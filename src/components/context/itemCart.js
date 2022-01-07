@@ -14,6 +14,7 @@ const ItemCart = ({item,quantity}) =>{
             <img src={item.img} alt="imagen" width="600vw"/>
             <h1>{item.name}</h1>
             <p>{quantity}</p>
+            <p>{item.price*quantity}</p>
             <button onClick={removeItems}>Eliminar Destino</button>
             
         </div>

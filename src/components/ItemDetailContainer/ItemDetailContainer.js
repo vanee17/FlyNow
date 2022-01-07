@@ -2,15 +2,16 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import  CartContext  from '../context/CartContext'
 import ItemCount from '../ItemCount'
-import {getProductById} from '../ItemListContainer/products'
 import ItemDetail from './ItemDetail'
+import {getDoc,doc} from 'firebase/firestore'
+import{db} from '../../services/firebase/firebase'
 
 
 function ItemDetailContainer() {
     const[product, setProduct] = useState([])
     const{addItem, addQuantity, isInCart} = useContext(CartContext)
     const [add,setAdd] = useState(false)
-    const [purchase, setPurchase] = useState(false)
+    const [purchase,setPurchase] = useState(true)
     const {paramId} = useParams()
 
     const onAdd = (quantity) => {
@@ -31,18 +32,21 @@ function ItemDetailContainer() {
         }
     }
         useEffect (() =>{
-            getProductById(paramId).then((Item) => {
-            setProduct(Item)
-            setPurchase(true)
-    })
-    return(() =>{
-        setProduct()
-        })
+            getDoc(doc(db,'products',paramId)).then((querySnapshot)=>{
+                console.log(querySnapshot);
+                const product={  id:querySnapshot.id,...querySnapshot.data()}
+                setProduct(product)
+            }).catch((error)=>{
+                console.log('error base de datos',error );
+            })
+            return () => {
+                setProduct();
+            };
     },[paramId])
 
     return (
         <div>
-            {purchase? ( 
+            
                 <div>
             <h1>ItemDetailContainer</h1>
             <ItemDetail  product={product}/>
@@ -52,9 +56,7 @@ function ItemDetailContainer() {
                 <Link to={'/cart'}>Finalizar compra</Link>
             )}
             </div>
-            ) : ( 
-                <div>cargando...</div>
-            )}
+            
         </div>
     )
 }
