@@ -24,7 +24,7 @@ const ItemCart = ({ item, count }) => {
                     <h2 className="Price">${item.price * count}</h2>
                 </td>
                 <td className="tabla1">
-                    <i onClick={removeItem} className="far fa-times-circle"></i>
+                    <i onClick={removeItem} className="x">x</i>
                 </td>
             </tr>
         </tbody>
